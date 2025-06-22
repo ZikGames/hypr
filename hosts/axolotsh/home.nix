@@ -43,6 +43,11 @@
     #userName = "Your Name";
     #userEmail = "your.email@example.com";
   };
+  home.packages = with pkgs; [
+    memo
+    mitch
+    mc
+  ];
 
 
   # programs.tmux = {
