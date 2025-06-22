@@ -5,6 +5,6 @@ imports = [
   ./nh.nix
  ];
  hyprland.enable = true;
- zsh.enable = true;
- nh.enable = true;
+ zsh.enable = false;
+ nh.enable = false;
 }

@@ -13,13 +13,18 @@ let cfg = config.hyprland; in {
     # Whether to enable XWayland
     xwayland.enable = true;
 
-    # Optional
-    # Whether to enable hyprland-session.target on hyprland startup
-    systemd.enable = true;
+    settings = {
+  exec-once = [
+    "foot"
+    "waybar"
+  ];
+  };
   };
     home.packages = with pkgs; [
-      fastfetch
-      
+      waybar
+      wofi
+      foot
+      everforest-gtk-theme
     ];
   # home.file."~/.config/hypr/hyprland.conf".text = ''
   #   decoration {
@@ -33,5 +38,19 @@ let cfg = config.hyprland; in {
   #   bindm = $mod, mouse:273, resizewindow
   #   bindm = $mod ALT, mouse:272, resizewindow
   # '';
+
+  gtk = {
+  enable = true;
+  theme = {
+    name = "everforest-gtk-theme";
+    package = pkgs.everforest-gtk-theme; # If necessary
+   };
+  # iconTheme = {
+  #   name = "Adwaita";
+  #   package = pkgs.gnome.adwaita-icon-theme;
+  # };
+  # gtk3.extraConfig = "gtk-application-prefer-dark-theme=1";
+  # gtk4.extraConfig = "gtk-application-prefer-dark-theme=1";
+};
 };
 }

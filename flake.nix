@@ -12,7 +12,7 @@
 
   outputs = { self, nixpkgs, ... }@inputs: {
 
-    nixosConfigurations.zik-pc = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nix-axolotsh = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/axolotsh/configuration.nix

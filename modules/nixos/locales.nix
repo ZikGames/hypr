@@ -5,6 +5,10 @@ let cfg = config.locales; in {
   };
 
   config = lib.mkIf cfg.enable {
+    services.xserver.xkb = {
+  layout = "us,ru";
+  variant = "";
+};
   i18n.defaultLocale = "ru_RU.UTF-8";
   console = {
      font = "cyr-sun16";

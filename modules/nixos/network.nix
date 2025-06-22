@@ -7,7 +7,7 @@ let cfg = config.network; in {
   config = lib.mkIf cfg.enable {
      networking = {
       hostName = "nix-axolotsh";
+      networkmanager.enable = true;
      };
-
      };
 }

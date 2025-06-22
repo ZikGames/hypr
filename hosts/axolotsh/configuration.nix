@@ -17,6 +17,7 @@
   virtualisation.virtualbox.guest = {
     enable = true;
   };
+  #security.pam.services.swaylock = {};
 
 system.stateVersion = "25.05";
 

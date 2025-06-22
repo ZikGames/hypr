@@ -23,7 +23,7 @@ in
     #  initialPassword = ""; # используй по желанию
       description = "аксолотня";
       extraGroups = [ "networkmanager" "pipewire" "wheel" "adbusers" "sudoers" "video" "audio" "kvm"];
-      shell = pkgs.zsh;
+    #  shell = pkgs.zsh;
     };
   };
 }
